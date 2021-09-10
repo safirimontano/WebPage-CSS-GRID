@@ -3,7 +3,7 @@ body, p, h1, ul, li, blockquote{
     margin: 0px;   
     }
 
-body{ font-family: 'Urbanist', sans-serif;
+body{ font-family: 'Poppins', sans-serif;
        
 }
 li{
@@ -26,13 +26,15 @@ a{
     ;
 }
 img{
+    display: block;
     max-width: 100%;
+    border-radius: 10px;
 }
 
 .header{ 
     grid-area: header;
     background: linear-gradient(90deg, rgba(235,191,224,0) 25%, rgba(232,188,226,0.6867121848739496) 100%);
-    padding: 30px;
+    padding: 20px;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -69,6 +71,7 @@ img{
 .sidenav{
     grid-area: sidenav;
     padding: 10px;
+   /* background: radial-gradient(circle, rgba(241,214,234,0.6923144257703081) 66%, rgba(255,255,255,1) 96%);*/
     }
 .sidenav li a{
     display: block;
@@ -83,11 +86,141 @@ img{
     
 }
 .sidenav li a:hover{
-    background-color: rgb(238, 203, 229);
+    background-color: #eecbe5;
 }
+
+/******CONTENT*****/
 
 .content{
     grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.column-wide /*linha inteira*/{
+    grid-column: 1 /-1;
+}
+
+.image1{
+    max-width: 100%;
+    grid-row: span 2;
+    align-self:center;
+    
+
+}
+.image2{
+    align-self: center;
+
+}
+
+/******ESTILOS GERAIS DO CONTENT*******/
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: -0.005;
+    color: rgba(0,0,0,.7);    
+}
+
+.informacoes p+p{ /*FALANDO COM O P QUE VEM DEPOIS DE OUTRO  */
+    margin-top: 30px;
+
+}
+
+/********TITULO*******/
+.titulo{
+    color:black;
+
+}
+
+.titulo h1{
+    line-height: 1;
+    font-size: 3.75rem;
+    font-weight: 600;
+}
+
+.titulo span{
+    font-size: 14px;
+    font-style: italic;
+}
+
+/***** CARACTERISTICAS******/
+
+.caracteristicas{
+    display: flex; /*para deixar um item ao lado do outro*/
+    align-items: flex-start;
+
+}
+
+.caracteristicas > div{
+    width: 80px;
+    text-align: center;
+    background-color: pink;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(232,188,226,0.6867121848739496);
+}
+
+.caracteristicas >div:first-child{ /*falando somente com a primeira div*/
+    margin-right: 30px;
+}
+
+.caracteristicas span{
+    display: block;
+    }
+
+.numero{
+    color:white;
+    font-size: 3em;
+    line-height: 1;
+    margin: 10px auto;
+
+}
+
+.rotulo{
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+}
+
+.destaque{
+    color: rgb(236, 128, 146);
+    font-size: 1rem;
+    max-width: 14em;
+    align-self: start;
+    
+}
+
+.citação, .atributos{
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 0px pink;
+    background: linear-gradient(140deg, pink, rgb(238, 209, 229));
+
+}
+.citação p{
+    font-size: 20px;
+    font-style: italic;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
+    align-self: start;
+    text-align: center;
+}
+
+.atributos li{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    padding: 15px;
+    
+}
+
+.atributos li+li{
+    border-bottom: 1px solid white;
 }
 
 /*****ANUNCIOS******/
@@ -95,32 +228,25 @@ img{
 .anuncios{
     grid-area: anuncios;
     display: grid;
-    align-items: start;
-
+    /*background: radial-gradient(circle, rgba(241,214,234,0.6923144257703081) 66%, rgba(255,255,255,1) 96%);*/
+    align-content: start;
+    padding: 20px;
+    gap: 30px ;
 }
 
+/*****FOOTER******/
 
 .footer{
     grid-area: footer;
-    background-color: lightpink;
-    border-radius: 5px;
-    
-
+    background: radial-gradient(circle, rgba(238,203,229,1) 27%, rgba(255,255,255,1) 96%);
+   
 }
 
 .footer p{
     margin-top: 10px;
-    padding: 10px;
+    padding: 30px;
     text-align: center;
     font-size: 16px;
-    box-shadow: 2px;
 }
 
-
-
-
-
-
-
-/** background: linear-gradient(138deg, rgba(235,191,224,0) 27%, rgba(232,188,226,0.7231267507002801) 96%); **/
 
